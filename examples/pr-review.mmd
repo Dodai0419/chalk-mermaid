@@ -1,0 +1,9 @@
+graph TD
+  %% how a pull request gets merged
+  open[Open a PR] --> ci{CI green?}
+  ci -- no --> fix[Fix the build]
+  fix --> ci
+  ci -- yes --> review[Ask for review]
+  review --> ok{Approved?}
+  ok -->|changes| fix
+  ok -->|yes| merge((Merge))

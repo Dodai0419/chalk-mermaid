@@ -1,0 +1,660 @@
+{
+ "agent-loop.mmd": {
+  "dir": "LR",
+  "nodes": [
+   {
+    "id": "U",
+    "text": "User asks",
+    "type": "stadium"
+   },
+   {
+    "id": "P",
+    "text": "Plan the steps",
+    "type": "square"
+   },
+   {
+    "id": "T",
+    "text": "Need a tool?",
+    "type": "diamond"
+   },
+   {
+    "id": "C",
+    "text": "Call the tool",
+    "type": "square"
+   },
+   {
+    "id": "O",
+    "text": "Read the result",
+    "type": "square"
+   },
+   {
+    "id": "A",
+    "text": "Answer",
+    "type": "stadium"
+   }
+  ],
+  "edges": [
+   {
+    "start": "U",
+    "end": "P",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "P",
+    "end": "T",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "T",
+    "end": "C",
+    "text": "yes",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "C",
+    "end": "O",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "O",
+    "end": "P",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "T",
+    "end": "A",
+    "text": "no",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   }
+  ]
+ },
+ "coffee.mmd": {
+  "dir": "TB",
+  "nodes": [
+   {
+    "id": "A",
+    "text": "Grind 18 g of beans",
+    "type": "square"
+   },
+   {
+    "id": "B",
+    "text": "Heat water to 94 C",
+    "type": "square"
+   },
+   {
+    "id": "C",
+    "text": "Bloom for 30 s",
+    "type": "square"
+   },
+   {
+    "id": "D",
+    "text": "Pour in three rounds",
+    "type": "square"
+   },
+   {
+    "id": "E",
+    "text": "Tastes sour?",
+    "type": "diamond"
+   },
+   {
+    "id": "F",
+    "text": "Grind finer next time",
+    "type": "square"
+   },
+   {
+    "id": "G",
+    "text": "Enjoy",
+    "type": "stadium"
+   }
+  ],
+  "edges": [
+   {
+    "start": "A",
+    "end": "B",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "B",
+    "end": "C",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "C",
+    "end": "D",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "D",
+    "end": "E",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "E",
+    "end": "F",
+    "text": "yes",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "E",
+    "end": "G",
+    "text": "no",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "F",
+    "end": "A",
+    "text": "",
+    "stroke": "dotted",
+    "arrow": "arrow_point"
+   }
+  ]
+ },
+ "dns.mmd": {
+  "dir": "LR",
+  "nodes": [
+   {
+    "id": "browser",
+    "text": "Browser",
+    "type": "square"
+   },
+   {
+    "id": "cache",
+    "text": "In cache?",
+    "type": "diamond"
+   },
+   {
+    "id": "ip",
+    "text": "IP address",
+    "type": "cylinder"
+   },
+   {
+    "id": "resolver",
+    "text": "Resolver",
+    "type": "square"
+   },
+   {
+    "id": "root",
+    "text": "Root server",
+    "type": "square"
+   },
+   {
+    "id": "tld",
+    "text": ".com server",
+    "type": "square"
+   },
+   {
+    "id": "auth",
+    "text": "Authoritative server",
+    "type": "square"
+   },
+   {
+    "id": "page",
+    "text": "Load the page",
+    "type": "square"
+   }
+  ],
+  "edges": [
+   {
+    "start": "browser",
+    "end": "cache",
+    "text": "",
+    "stroke": "thick",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "cache",
+    "end": "ip",
+    "text": "hit",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "cache",
+    "end": "resolver",
+    "text": "miss",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "resolver",
+    "end": "root",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "root",
+    "end": "tld",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "tld",
+    "end": "auth",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "auth",
+    "end": "ip",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "ip",
+    "end": "page",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   }
+  ]
+ },
+ "pr-review.mmd": {
+  "dir": "TB",
+  "nodes": [
+   {
+    "id": "open",
+    "text": "Open a PR",
+    "type": "square"
+   },
+   {
+    "id": "ci",
+    "text": "CI green?",
+    "type": "diamond"
+   },
+   {
+    "id": "fix",
+    "text": "Fix the build",
+    "type": "square"
+   },
+   {
+    "id": "review",
+    "text": "Ask for review",
+    "type": "square"
+   },
+   {
+    "id": "ok",
+    "text": "Approved?",
+    "type": "diamond"
+   },
+   {
+    "id": "merge",
+    "text": "Merge",
+    "type": "circle"
+   }
+  ],
+  "edges": [
+   {
+    "start": "open",
+    "end": "ci",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "ci",
+    "end": "fix",
+    "text": "no",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "fix",
+    "end": "ci",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "ci",
+    "end": "review",
+    "text": "yes",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "review",
+    "end": "ok",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "ok",
+    "end": "fix",
+    "text": "changes",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "ok",
+    "end": "merge",
+    "text": "yes",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   }
+  ]
+ },
+ "syntax.mmd": {
+  "dir": "LR",
+  "nodes": [
+   {
+    "id": "a",
+    "text": "Start",
+    "type": "square"
+   },
+   {
+    "id": "b",
+    "text": "b",
+    "type": "square"
+   },
+   {
+    "id": "c",
+    "text": "c",
+    "type": "square"
+   },
+   {
+    "id": "d",
+    "text": "Store",
+    "type": "cylinder"
+   },
+   {
+    "id": "e",
+    "text": "Hexagon",
+    "type": "hexagon"
+   },
+   {
+    "id": "f",
+    "text": "Flag",
+    "type": "odd"
+   },
+   {
+    "id": "g",
+    "text": "Slant",
+    "type": "lean_right"
+   },
+   {
+    "id": "q",
+    "text": "Quoted (text)",
+    "type": "square"
+   },
+   {
+    "id": "h",
+    "text": "Sub",
+    "type": "subroutine"
+   },
+   {
+    "id": "i",
+    "text": "Circle",
+    "type": "circle"
+   },
+   {
+    "id": "j",
+    "text": "j",
+    "type": "square"
+   }
+  ],
+  "edges": [
+   {
+    "start": "a",
+    "end": "b",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "a",
+    "end": "c",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "b",
+    "end": "d",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_open"
+   },
+   {
+    "start": "c",
+    "end": "d",
+    "text": "",
+    "stroke": "dotted",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "d",
+    "end": "e",
+    "text": "thick",
+    "stroke": "thick",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "e",
+    "end": "f",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "f",
+    "end": "g",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "q",
+    "end": "a",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "c",
+    "end": "h",
+    "text": "label here",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "h",
+    "end": "i",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_circle"
+   },
+   {
+    "start": "i",
+    "end": "j",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_cross"
+   },
+   {
+    "start": "j",
+    "end": "a",
+    "text": "label",
+    "stroke": "dotted",
+    "arrow": "arrow_point"
+   }
+  ]
+ },
+ "compact.mmd": {
+  "dir": "TB",
+  "nodes": [
+   {
+    "id": "A",
+    "text": "A",
+    "type": "square"
+   },
+   {
+    "id": "B",
+    "text": "B",
+    "type": "square"
+   },
+   {
+    "id": "C",
+    "text": "C",
+    "type": "square"
+   },
+   {
+    "id": "D",
+    "text": "D",
+    "type": "square"
+   },
+   {
+    "id": "my-node",
+    "text": "my-node",
+    "type": "square"
+   },
+   {
+    "id": "E",
+    "text": "E",
+    "type": "square"
+   },
+   {
+    "id": "F",
+    "text": "F",
+    "type": "square"
+   },
+   {
+    "id": "G",
+    "text": "Trap",
+    "type": "trapezoid"
+   },
+   {
+    "id": "H",
+    "text": "Inv",
+    "type": "inv_trapezoid"
+   },
+   {
+    "id": "I",
+    "text": "I",
+    "type": "square"
+   },
+   {
+    "id": "J",
+    "text": "J",
+    "type": "square"
+   }
+  ],
+  "edges": [
+   {
+    "start": "A",
+    "end": "B",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "A",
+    "end": "C",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "B",
+    "end": "D",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "C",
+    "end": "D",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "my-node",
+    "end": "E",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_open"
+   },
+   {
+    "start": "A",
+    "end": "E",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "double_arrow_point"
+   },
+   {
+    "start": "B",
+    "end": "C",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "double_arrow_circle"
+   },
+   {
+    "start": "C",
+    "end": "D",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "double_arrow_cross"
+   },
+   {
+    "start": "D",
+    "end": "F",
+    "text": "",
+    "stroke": "dotted",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "E",
+    "end": "G",
+    "text": "",
+    "stroke": "thick",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "G",
+    "end": "H",
+    "text": "",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "H",
+    "end": "I",
+    "text": "text",
+    "stroke": "normal",
+    "arrow": "arrow_point"
+   },
+   {
+    "start": "I",
+    "end": "J",
+    "text": "two words",
+    "stroke": "normal",
+    "arrow": "arrow_open"
+   }
+  ]
+ }
+}

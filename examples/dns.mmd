@@ -1,0 +1,7 @@
+flowchart LR
+  browser[Browser] ==> cache{In cache?}
+  cache -->|hit| ip[(IP address)]
+  cache -->|miss| resolver[Resolver]
+  resolver --> root[Root server] --> tld[.com server] --> auth[Authoritative server]
+  auth --> ip
+  ip --> page[Load the page]

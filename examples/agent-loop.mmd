@@ -1,0 +1,7 @@
+flowchart LR
+  U([User asks]) --> P[Plan the steps]
+  P --> T{Need a tool?}
+  T -->|yes| C[Call the tool]
+  C --> O[Read the result]
+  O --> P
+  T -->|no| A([Answer])

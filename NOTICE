@@ -1,0 +1,9 @@
+chalk-mermaid includes material adapted from these MIT-licensed projects:
+
+- khan-explainer, Copyright (c) 2026 Haider Farooq, https://github.com/haiderfarooq3/khan-explainer
+  curve(), oval() and box() in chalk_mermaid.py are ports of scripts/board.html, as are the chalk and marker
+  colours, the arrowhead and the handwriting font list.
+- mermaid, Copyright (c) 2014 - 2022 Knut Sveidqvist, https://github.com/mermaid-js/mermaid
+  The flowchart syntax and the shape and edge names follow mermaid; no mermaid code is included.
+
+Both are distributed under the MIT License, whose text is in LICENSE.

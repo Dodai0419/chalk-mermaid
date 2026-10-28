@@ -1,0 +1,11 @@
+graph LR
+  a[Start] --> b & c
+  b --- d[(Store)]
+  c -.-> d
+  d == thick ==> e{{Hexagon}}
+  e --> f>Flag] --> g[/Slant/]
+  q["Quoted (text)"] --> a
+  c -- label here --> h[[Sub]]
+  h --o i((Circle))
+  i --x j
+  j -.label.-> a

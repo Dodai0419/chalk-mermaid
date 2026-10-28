@@ -1,0 +1,15 @@
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    my-node---E
+    A<-->E
+    B o--o C
+    C x--x D
+    D-.->F:::warn
+    E==>G[/Trap\]
+    G-->H[\Inv/]
+    H--text-->I
+    I-- two words ---J
+    classDef warn fill:#f96
